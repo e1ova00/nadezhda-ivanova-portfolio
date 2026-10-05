@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Надежда Иванова — дизайнер</title>
+  <meta name="description" content="Надежда Иванова — студентка СПбГУПТД, дизайнер: UX/UI, digital, фотография, видео.">
+  <meta name="theme-color" content="#ecebe6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ecebe6'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23111'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="preload" as="image" href="images/portrait.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<!-- Шторка для переходов между разделами -->
+<div class="curtain" aria-hidden="true"><span class="curtain__label mono"></span></div>
+
+<!-- Кастомный курсор (только мышь) -->
+<div class="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"><span class="cursor__label mono"></span></div>
+</div>
+
+<header class="header" data-header>
+  <a class="header__logo" href="#index" data-magnetic data-cursor="OPEN" aria-label="Наверх">Н.&thinsp;И.</a>
+  <nav class="header__nav mono" aria-label="Основная навигация">
+    <a href="#index" data-magnetic data-cursor="OPEN">Index</a>
+    <a href="#work" data-magnetic data-cursor="OPEN">Work</a>
+    <a href="#video" data-magnetic data-cursor="OPEN">Video</a>
+    <a href="#photo" data-magnetic data-cursor="OPEN">Photo</a>
+    <a href="#social" data-magnetic data-cursor="OPEN">Social</a>
+    <a href="#about" data-magnetic data-cursor="OPEN">About</a>
+  </nav>
+  <p class="header__clock mono" aria-label="Время в Санкт-Петербурге"><span>59.93°N</span> <span data-clock>--:--</span></p>
+</header>
+
+<!-- Боковой индекс разделов (десктоп) -->
+<ol class="side-index mono is-off" aria-hidden="true">
+  <li data-for="work"><span>01</span> UX/UI</li>
+  <li data-for="webapp"><span>02</span> Web app</li>
+  <li data-for="video"><span>03</span> Video</li>
+  <li data-for="photo"><span>04</span> Photo</li>
+  <li data-for="social"><span>05</span> Charity</li>
+</ol>
+
+<main id="main">
+
+  <!-- 00 — INTRO -->
+  <section class="hero" id="index" aria-label="Надежда Иванова">
+    <p class="hero__meta hero__meta--top mono tracked" data-intro="meta">
+      <span>00</span><span>Portfolio</span><span>Saint</span><span>Petersburg</span><span>2026</span>
+    </p>
+
+    <h1 class="hero__name" data-split aria-label="Надежда Иванова">
+      <span class="hero__first">Надежда</span>
+      <span class="hero__last">Иванова</span>
+    </h1>
+
+    <figure class="hero__portrait" data-intro="portrait">
+      <div class="hero__portrait-inner" data-parallax-mouse>
+        <img src="images/portrait.jpg"
+             srcset="images/portrait-600.jpg 600w, images/portrait.jpg 1100w"
+             sizes="(min-width: 768px) 30vw, 62vw"
+             alt="Портрет Надежды Ивановой" width="1100" height="1650" fetchpriority="high">
+      </div>
+      <figcaption class="mono">(fig. 00) — self</figcaption>
+    </figure>
+
+    <ul class="hero__roles mono" data-intro="meta">
+      <li>Student / Designer</li>
+      <li>Saint Petersburg</li>
+      <li>UX/UI — Digital — Photography — Video</li>
+    </ul>
+
+    <p class="hero__scroll mono" data-intro="meta"><span class="arrow">↓</span> scroll</p>
+  </section>
+
+  <!-- О себе -->
+  <section class="statement" aria-labelledby="statement-title">
+    <p class="label mono" data-reveal><span>(i)</span> О себе</p>
+    <h2 id="statement-title" class="statement__text" data-reveal="lines">
+      Работаю на&nbsp;пересечении интерфейсов, изображения и&nbsp;движения&nbsp;— от&nbsp;UX/UI и&nbsp;веб-дизайна до&nbsp;видео, фотографии и&nbsp;визуальных экспериментов.
+    </h2>
+    <div class="statement__aside mono" data-reveal data-speed="1.12">
+      <p>Студентка СПбГУПТД.</p>
+      <p>Ищу собственный визуальный язык — тихий, точный и&nbsp;немного странный.</p>
+    </div>
+  </section>
+
+  <!-- Signature: парящая композиция -->
+  <section class="float" aria-label="Избранные изображения">
+    <p class="float__hint mono tracked"><span>Selected</span><span>fragments</span><span>(move</span><span>closer)</span></p>
+    <div class="float__stage" data-float data-cursor="VIEW">
+      <figure class="float__item" style="--x:-30%;--y:-18%;--w:22;--r:-6deg" data-ph="projects/fashion/screen-01.jpg"></figure>
+      <figure class="float__item" style="--x:4%;--y:-28%;--w:16;--r:4deg"  data-ph="photography/photo-01.jpg"></figure>
+      <figure class="float__item" style="--x:24%;--y:-6%;--w:20;--r:7deg"  data-ph="projects/web-app/screen-01.jpg"></figure>
+      <figure class="float__item" style="--x:-12%;--y:16%;--w:18;--r:3deg"  data-ph="photography/photo-02.jpg"></figure>
+      <figure class="float__item" style="--x:-2%;--y:-2%;--w:24;--r:-2deg" data-ph="video/poster-01.jpg"></figure>
+      <figure class="float__item" style="--x:30%;--y:24%;--w:14;--r:-8deg" data-ph="photography/photo-03.jpg"></figure>
+      <figure class="float__item" style="--x:-34%;--y:22%;--w:13;--r:9deg"  data-ph="charity/charity-01.jpg"></figure>
+    </div>
+  </section>
+
+  <!-- 01 — UX/UI -->
+  <section class="work" id="work" aria-labelledby="work-title">
+    <header class="section-head" data-reveal>
+      <p class="mono tracked section-head__meta"><span>01</span><span>Selected</span><span>Works</span><span>UX/UI</span></p>
+      <h2 id="work-title" class="display" data-drift>Интерфейсы</h2>
+    </header>
+
+    <div class="coverflow" data-coverflow data-cursor="DRAG" tabindex="0" aria-roledescription="карусель" aria-label="Скриншоты проектов">
+      <div class="coverflow__titles" aria-live="polite">
+        <p class="coverflow__title" data-title></p>
+      </div>
+      <div class="coverflow__track">
+        <figure class="coverflow__slide" data-project="Fashion e-commerce" data-ph="projects/fashion/screen-01.jpg"></figure>
+        <figure class="coverflow__slide" data-project="Fashion e-commerce" data-ph="projects/fashion/screen-02.jpg"></figure>
+        <figure class="coverflow__slide" data-project="Fashion e-commerce" data-ph="projects/fashion/screen-03.jpg"></figure>
+        <figure class="coverflow__slide" data-project="Web application" data-ph="projects/web-app/screen-01.jpg"></figure>
+        <figure class="coverflow__slide" data-project="Web application" data-ph="projects/web-app/screen-02.jpg"></figure>
+        <figure class="coverflow__slide" data-project="Web application" data-ph="projects/web-app/screen-03.jpg"></figure>
+      </div>
+      <div class="coverflow__ui mono">
+        <button class="coverflow__btn" data-prev data-magnetic aria-label="Предыдущий слайд">←</button>
+        <p class="coverflow__count" data-count>01 / 06</p>
+        <button class="coverflow__btn" data-next data-magnetic aria-label="Следующий слайд">→</button>
+      </div>
+    </div>
+
+    <!-- Project 01: fashion -->
+    <article class="project" id="fashion" aria-labelledby="fashion-title">
+      <div class="project__info" data-reveal>
+        <p class="mono project__num">P—01</p>
+        <h3 id="fashion-title" class="project__title">Fashion e-commerce</h3>
+        <p class="project__desc">Сайт для покупки одежды. <span class="todo">[ДОБАВИТЬ: 2–3 предложения — задача, аудитория, твоя роль]</span></p>
+        <dl class="project__facts mono">
+          <div><dt>Тип</dt><dd>UX/UI, web</dd></div>
+          <div><dt>Год</dt><dd class="todo">[год]</dd></div>
+          <div><dt>Инструменты</dt><dd class="todo">[напр. Figma]</dd></div>
+        </dl>
+      </div>
+      <div class="crossfade" data-crossfade>
+        <div class="crossfade__sticky">
+          <figure class="crossfade__layer crossfade__layer--a" data-ph="projects/fashion/desktop.jpg"><figcaption class="mono">desktop</figcaption></figure>
+          <figure class="crossfade__layer crossfade__layer--b" data-ph="projects/fashion/mobile.jpg"><figcaption class="mono">mobile</figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 02: web app -->
+    <article class="project project--app" id="webapp" aria-labelledby="app-title">
+      <div class="project__info" data-reveal>
+        <p class="mono project__num">P—02</p>
+        <h3 id="app-title" class="project__title">Web application</h3>
+        <p class="project__desc">Веб-приложение. <span class="todo">[ДОБАВИТЬ: 2–3 предложения — что делает приложение, для кого, твоя роль]</span></p>
+        <p class="mono project__hint">Наведи на экран — на обороте задача и решение</p>
+      </div>
+      <ul class="flips" data-reveal>
+        <li class="flip" tabindex="0" data-cursor="VIEW">
+          <div class="flip__inner">
+            <figure class="flip__face flip__front" data-ph="projects/web-app/screen-01.jpg"></figure>
+            <div class="flip__face flip__back"><p class="mono">01 — Задача</p><p class="todo">[Какую проблему пользователя решает экран]</p></div>
+          </div>
+        </li>
+        <li class="flip" tabindex="0" data-cursor="VIEW">
+          <div class="flip__inner">
+            <figure class="flip__face flip__front" data-ph="projects/web-app/screen-02.jpg"></figure>
+            <div class="flip__face flip__back"><p class="mono">02 — Решение</p><p class="todo">[Ключевое дизайн-решение]</p></div>
+          </div>
+        </li>
+        <li class="flip" tabindex="0" data-cursor="VIEW">
+          <div class="flip__inner">
+            <figure class="flip__face flip__front" data-ph="projects/web-app/screen-03.jpg"></figure>
+            <div class="flip__face flip__back"><p class="mono">03 — Результат</p><p class="todo">[Что получилось / что бы улучшила]</p></div>
+          </div>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- 03 — VIDEO -->
+  <section class="video" id="video" aria-labelledby="video-title">
+    <header class="section-head section-head--light" data-reveal>
+      <p class="mono tracked section-head__meta"><span>03</span><span>Moving</span><span>Image</span><span>3 works</span></p>
+      <h2 id="video-title" class="display" data-drift>Видео</h2>
+    </header>
+    <ol class="reels">
+      <li class="reel reel--1" data-reveal>
+        <button class="reel__frame" data-video="video/video-01.mp4" data-cursor="PLAY" aria-label="Смотреть видео 01">
+          <span class="reel__media" data-ph="video/poster-01.jpg"></span>
+        </button>
+        <p class="reel__caption mono"><span>V—01</span> <span class="todo">[Название видео]</span> <span class="todo">[год]</span></p>
+      </li>
+      <li class="reel reel--2" data-reveal data-speed="0.9">
+        <button class="reel__frame" data-video="video/video-02.mp4" data-cursor="PLAY" aria-label="Смотреть видео 02">
+          <span class="reel__media" data-ph="video/poster-02.jpg"></span>
+        </button>
+        <p class="reel__caption mono"><span>V—02</span> <span class="todo">[Название видео]</span> <span class="todo">[год]</span></p>
+      </li>
+      <li class="reel reel--3" data-reveal data-speed="1.08">
+        <button class="reel__frame" data-video="video/video-03.mp4" data-cursor="PLAY" aria-label="Смотреть видео 03">
+          <span class="reel__media" data-ph="video/poster-03.jpg"></span>
+        </button>
+        <p class="reel__caption mono"><span>V—03</span> <span class="todo">[Название видео]</span> <span class="todo">[год]</span></p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 04 — PHOTOGRAPHY -->
+  <section class="photo" id="photo" aria-labelledby="photo-title">
+    <header class="section-head" data-reveal>
+      <p class="mono tracked section-head__meta"><span>04</span><span>Contact</span><span>Sheet</span><span>Archive</span></p>
+      <h2 id="photo-title" class="display" data-drift>Фотография</h2>
+    </header>
+    <div class="sheet" data-sheet data-trail>
+      <div class="sheet__stage">
+        <p class="sheet__note mono">(перетаскивай&nbsp;/ нажми, чтобы открыть)</p>
+        <!-- --tx/--ty: куда фото разлетается из стопки (в % от сцены) -->
+        <figure class="sheet__item" style="--tx:-34%;--ty:-26%;--w:24;--r:-4deg" data-ph="photography/photo-01.jpg" data-cursor="VIEW" tabindex="0"><figcaption class="mono">01</figcaption></figure>
+        <figure class="sheet__item" style="--tx:-4%;--ty:-32%;--w:16;--r:3deg"  data-ph="photography/photo-02.jpg" data-cursor="VIEW" tabindex="0"><figcaption class="mono">02</figcaption></figure>
+        <figure class="sheet__item" style="--tx:30%;--ty:-22%;--w:20;--r:-2deg" data-ph="photography/photo-03.jpg" data-cursor="VIEW" tabindex="0"><figcaption class="mono">03</figcaption></figure>
+        <figure class="sheet__item" style="--tx:-28%;--ty:20%;--w:17;--r:5deg"  data-ph="photography/photo-04.jpg" data-cursor="VIEW" tabindex="0"><figcaption class="mono">04</figcaption></figure>
+        <figure class="sheet__item" style="--tx:2%;--ty:10%;--w:26;--r:-1deg"  data-ph="photography/photo-05.jpg" data-cursor="VIEW" tabindex="0"><figcaption class="mono">05</figcaption></figure>
+        <figure class="sheet__item" style="--tx:34%;--ty:22%;--w:15;--r:6deg"  data-ph="photography/photo-06.jpg" data-cursor="VIEW" tabindex="0"><figcaption class="mono">06</figcaption></figure>
+        <figure class="sheet__item" style="--tx:-40%;--ty:-2%;--w:12;--r:-7deg" data-ph="photography/photo-07.jpg" data-cursor="VIEW" tabindex="0"><figcaption class="mono">07</figcaption></figure>
+        <figure class="sheet__item" style="--tx:40%;--ty:-2%;--w:13;--r:4deg"  data-ph="photography/photo-08.jpg" data-cursor="VIEW" tabindex="0"><figcaption class="mono">08</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 — CHARITY / SOCIAL -->
+  <section class="social" id="social" aria-labelledby="social-title">
+    <p class="mono tracked section-head__meta" data-reveal><span>05</span><span>Charity</span><span>/</span><span>Social</span></p>
+    <h2 id="social-title" class="social__phrase" data-reveal="lines"><span class="todo">[Одна главная фраза проекта — крупно]</span></h2>
+    <div class="social__body">
+      <figure class="social__img" data-reveal="clip" data-ph="charity/charity-01.jpg"></figure>
+      <div class="social__text" data-reveal>
+        <p class="todo">[ДОБАВИТЬ: короткое описание — что за проект, для кого, что ты сделала. 3–4 предложения.]</p>
+        <figure class="social__img social__img--small" data-reveal="clip" data-ph="charity/charity-02.jpg"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 — ABOUT / CV -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <header class="about__head" data-reveal>
+      <p class="mono tracked section-head__meta"><span>06</span><span>About</span><span>/</span><span>CV</span></p>
+      <h2 id="about-title" class="about__name"><em>Надежда</em> Иванова</h2>
+      <p class="mono about__sub">Designer / Student — Saint Petersburg</p>
+    </header>
+
+    <div class="cv">
+      <section class="cv__block" data-reveal aria-labelledby="cv-edu">
+        <h3 id="cv-edu" class="cv__title mono">Образование</h3>
+        <ul class="cv__list">
+          <li><span class="mono cv__date todo">[20XX — н.в.]</span><span>Санкт-Петербургский государственный университет промышленных технологий и&nbsp;дизайна (СПбГУПТД)<br><span class="cv__note todo">[институт / направление / курс]</span></span></li>
+        </ul>
+      </section>
+
+      <section class="cv__block" data-reveal aria-labelledby="cv-exp">
+        <h3 id="cv-exp" class="cv__title mono">Опыт</h3>
+        <ul class="cv__list">
+          <li><span class="mono cv__date todo">[период]</span><span class="todo">[Место / проект / фриланс — роль. Если опыта нет, этот блок можно удалить]</span></li>
+        </ul>
+      </section>
+
+      <section class="cv__block" data-reveal aria-labelledby="cv-skills">
+        <h3 id="cv-skills" class="cv__title mono">Навыки</h3>
+        <ul class="cv__tags">
+          <li>UX/UI</li><li>Web design</li><li>Digital / Interactive</li><li>Photography</li><li>Video</li><li>Visual research</li>
+        </ul>
+        <p class="cv__note mono todo">[Инструменты: напр. Figma, Adobe…]</p>
+      </section>
+
+      <section class="cv__block" data-reveal aria-labelledby="cv-contact" id="contact">
+        <h3 id="cv-contact" class="cv__title mono">Контакты</h3>
+        <ul class="cv__links">
+          <li><a href="mailto:you@example.com" data-magnetic data-cursor="OPEN" class="todo">[email]</a></li>
+          <li><a href="#" data-magnetic data-cursor="OPEN" class="todo">[Telegram]</a></li>
+          <li><a href="#" data-magnetic data-cursor="OPEN" class="todo">[Behance]</a></li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" data-footer>
+  <a class="footer__big" href="mailto:you@example.com" data-cursor="OPEN" data-footer-word>
+    <span>Написать</span> <span class="arrow">↗</span>
+  </a>
+
+  <div class="footer__grid mono">
+    <div>
+      <p class="footer__k">AI</p>
+      <p>Claude Code (Anthropic) — концепция, вёрстка и JS-эффекты.<br>Подробно — в <a href="README.md">README.md</a>.</p>
+    </div>
+    <div>
+      <p class="footer__k">Время выполнения</p>
+      <p class="todo">[N часов]</p>
+    </div>
+    <div>
+      <p class="footer__k">JavaScript</p>
+      <p>Кастомный курсор, магнитные элементы, анимация букв заголовка, появление блоков при прокрутке, «парящие» изображения с физикой, 3D-карусель, смена слоёв при скролле, flip-карточки, раскрытие видео, архив фото с перетаскиванием, поведение хедера, шторка переходов, часы СПб.</p>
+    </div>
+    <div>
+      <p class="footer__k">©</p>
+      <p>Надежда Иванова, 2026</p>
+      <p><a href="#index" data-cursor="OPEN">↑ наверх</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Полноэкранный просмотр видео -->
+<div class="modal modal--video" data-video-modal hidden>
+  <div class="modal__clip">
+    <video controls playsinline preload="none"></video>
+    <p class="modal__missing mono" hidden></p>
+  </div>
+  <button class="modal__close mono" data-close data-cursor="OPEN">Закрыть ✕</button>
+</div>
+
+<!-- Просмотр фото -->
+<div class="modal modal--photo" data-photo-modal hidden>
+  <div class="modal__clip"><img alt=""><p class="modal__missing mono" hidden></p></div>
+  <button class="modal__close mono" data-close data-cursor="OPEN">Закрыть ✕</button>
+</div>
+
+<script src="js/utils.js" defer></script>
+<script src="js/placeholders.js" defer></script>
+<script src="js/cursor.js" defer></script>
+<script src="js/magnetic.js" defer></script>
+<script src="js/intro.js" defer></script>
+<script src="js/reveal.js" defer></script>
+<script src="js/scroll-fx.js" defer></script>
+<script src="js/header.js" defer></script>
+<script src="js/curtain.js" defer></script>
+<script src="js/float.js" defer></script>
+<script src="js/coverflow.js" defer></script>
+<script src="js/crossfade.js" defer></script>
+<script src="js/flip.js" defer></script>
+<script src="js/modal.js" defer></script>
+<script src="js/video.js" defer></script>
+<script src="js/sheet.js" defer></script>
+<script src="js/footer.js" defer></script>
+</body>
+</html>
