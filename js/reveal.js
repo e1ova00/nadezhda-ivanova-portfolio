@@ -38,15 +38,24 @@
   const run = () => {
     if (!NI.reduced) document.querySelectorAll('[data-reveal="lines"]').forEach(splitLines);
 
+    // Элемент, полностью скрытый clip-path, браузер считает невидимым,
+    // поэтому для data-reveal="clip" следим за родителем, а класс ставим самому элементу.
+    const targets = new Map();
+    blocks.forEach((b) => {
+      const watch = b.dataset.reveal === 'clip' ? b.parentElement : b;
+      if (!targets.has(watch)) targets.set(watch, []);
+      targets.get(watch).push(b);
+    });
+
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
-        e.target.classList.add('is-visible');
+        targets.get(e.target).forEach((el) => el.classList.add('is-visible'));
         io.unobserve(e.target);
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
 
-    blocks.forEach((b) => io.observe(b));
+    targets.forEach((_, watch) => io.observe(watch));
   };
 
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(run);

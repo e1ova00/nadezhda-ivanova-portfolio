@@ -343,11 +343,12 @@ main section:focus, main article:focus { outline: none; }
    SOCIAL — пауза
    ========================================================= */
 .social { padding: 30vh var(--gutter) 26vh; display: grid; gap: 10vh; }
-.social__phrase { font-size: var(--fs-lead); font-weight: 300; letter-spacing: -0.035em; line-height: 1.05; max-width: 18ch; }
+.social__phrase { font-size: clamp(2.3rem, 1.2rem + 5vw, 7.5rem); font-weight: 300; letter-spacing: -0.035em; line-height: 1.05; max-width: 18ch; }
 .social__body { display: grid; gap: 6vh; }
-.social__img { aspect-ratio: 4 / 5; width: 78%; }
-.social__img--small { width: 50%; aspect-ratio: 1; margin-top: 6vh; margin-left: auto; }
-.social__text { max-width: 36ch; }
+.social__img { aspect-ratio: 2 / 3; width: 78%; }
+.social__img--small { width: 86%; aspect-ratio: 1600 / 1146; margin-top: 6vh; margin-left: auto; }
+.social__text { max-width: 36ch; display: grid; gap: 14px; }
+.social__label { color: var(--stone); }
 
 /* =========================================================
    ABOUT / CV
@@ -491,10 +492,11 @@ main section:focus, main article:focus { outline: none; }
 
   .social { grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
   .social > .section-head__meta { grid-column: 1 / 5; }
-  .social__phrase { grid-column: 3 / 12; font-size: clamp(2rem, 1rem + 3.4vw, 5.2rem); }
+  .social__phrase { grid-column: 3 / 12; font-size: clamp(2.4rem, 1rem + 5vw, 7.5rem); max-width: 14ch; }
   .social__body { grid-column: 1 / 13; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
   .social__img { grid-column: 2 / 6; width: auto; }
-  .social__text { grid-column: 8 / 12; align-self: end; }
+  .social__text { grid-column: 8 / 12; align-self: end; max-width: none; }
+  .social__img--small { width: 100%; grid-column: auto; }
 
   .cv { grid-template-columns: 1fr 1fr; column-gap: calc(var(--gutter) * 2); }
   .cv__list li { grid-template-columns: 12ch 1fr; gap: 20px; }
