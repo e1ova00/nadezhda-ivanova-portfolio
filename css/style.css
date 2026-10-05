@@ -217,14 +217,12 @@ main section:focus, main article:focus { outline: none; }
 .float__item {
   position: absolute; left: calc(50% + var(--x)); top: calc(50% + var(--y));
   width: calc(var(--w) * 1.9vw);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: var(--ar, 4 / 5);
   margin: 0;
   transform: translate(-50%, -50%) rotate(var(--r));
   will-change: transform;
   box-shadow: 0 1px 0 rgba(0,0,0,.04);
 }
-.float__item:nth-child(odd) { aspect-ratio: 3 / 4; }
-.float__item:nth-child(3n) { aspect-ratio: 16 / 11; }
 
 /* =========================================================
    SECTION HEADS
@@ -333,10 +331,12 @@ main section:focus, main article:focus { outline: none; }
 .photo { padding-bottom: 8vh; }
 .sheet { position: relative; padding: 0 var(--gutter); }
 .sheet__stage { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
-.sheet__note { grid-column: 1 / -1; color: var(--stone); }
-.sheet__item { margin: 0; aspect-ratio: 3 / 4; transform: rotate(calc(var(--r) * .4)); cursor: pointer; }
-.sheet__item:nth-of-type(3n) { aspect-ratio: 4 / 3; grid-column: span 2; width: 80%; justify-self: center; }
-.sheet__item:nth-of-type(even) { margin-top: 28px; }
+.sheet__note { grid-column: 1 / -1; color: var(--stone); order: -3; }
+.sheet__item { margin: 0; aspect-ratio: var(--ar); transform: rotate(calc(var(--r) * .4)); cursor: pointer; }
+.sheet__item--h { grid-column: span 2; width: 86%; }
+.sheet__item--h:nth-of-type(even) { justify-self: end; }
+.sheet__item--v { order: -1; }
+.sheet__item--accent { order: -2; margin-top: 28px; }
 .sheet__item figcaption { position: absolute; right: 6px; top: 6px; z-index: 1; color: var(--stone); background: var(--paper); padding: 0 4px; }
 
 /* =========================================================
@@ -487,7 +487,7 @@ main section:focus, main article:focus { outline: none; }
   .reel--3 { grid-column: 2 / 9; width: auto; margin-top: -40vh; }
 
   .sheet__stage { grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .sheet__item:nth-of-type(3n) { grid-column: span 2; }
+  .sheet__item--h { grid-column: span 2; width: 100%; }
 
   .social { grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
   .social > .section-head__meta { grid-column: 1 / 5; }
@@ -538,8 +538,6 @@ main section:focus, main article:focus { outline: none; }
     will-change: transform;
     transform: translate(-50%, -50%);
   }
-  .sheet.is-scatter .sheet__item:nth-of-type(odd) { aspect-ratio: 3 / 4; }
-  .sheet.is-scatter .sheet__item:nth-of-type(3n) { aspect-ratio: 4 / 3; }
   .sheet__item.is-dragging { z-index: 20; }
 }
 
