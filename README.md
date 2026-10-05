@@ -4,7 +4,8 @@
 Вёрстка по принципу **Mobile First**: базовые стили написаны для телефона, а `@media (min-width: 768px)`
 и `@media (min-width: 1100px)` добавляют планшетную и десктопную раскладку.
 
-- Сайт: `https://<логин>.github.io/nadezhda-ivanova-portfolio/` *(заменить после публикации)*
+- Сайт: https://e1ova00.github.io/nadezhda-ivanova-portfolio/
+- Репозиторий: https://github.com/e1ova00/nadezhda-ivanova-portfolio
 - Шрифты: Inter Tight + JetBrains Mono (Google Fonts, open source)
 
 ## Концепция — «Невесомый архив»
