@@ -30,6 +30,8 @@
 
     btn.addEventListener('click', () => {
       NI.openModal(modal, btn, () => {
+        // вертикальное видео — узкое окно 9:16, горизонтальное — 16:9
+        modal.classList.toggle('modal--tall', !!btn.closest('.reel--tall'));
         missing.hidden = true; player.hidden = false;
         player.onerror = () => {
           player.hidden = true; missing.hidden = false;

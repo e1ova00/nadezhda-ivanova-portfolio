@@ -323,6 +323,8 @@ main section:focus, main article:focus { outline: none; }
 .reel__caption { margin-top: 10px; display: flex; gap: 1.2em; }
 .reel__caption .todo { color: var(--stone); }
 .reel--2 { width: 82%; margin-left: auto; }
+.reel--tall { width: 64%; }
+.reel--tall .reel__media { aspect-ratio: 9 / 16; }
 .reel--3 { width: 90%; }
 
 /* =========================================================
@@ -391,6 +393,8 @@ main section:focus, main article:focus { outline: none; }
 }
 .modal__clip video, .modal__clip img { width: 100%; max-height: 86svh; object-fit: contain; background: #000; }
 .modal__clip video { aspect-ratio: 16 / 9; }
+.modal--tall .modal__clip { width: min(92vw, calc(86svh * 9 / 16)); }
+.modal--tall .modal__clip video { aspect-ratio: 9 / 16; }
 .modal__clip img { width: auto; max-width: 100%; margin: 0 auto; }
 .modal { opacity: 0; transition: opacity .4s ease; }
 .modal.is-open { opacity: 1; }
@@ -479,8 +483,8 @@ main section:focus, main article:focus { outline: none; }
 
   .reels { grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); gap: 0 var(--gutter); }
   .reel--1 { grid-column: 1 / 13; }
-  .reel--2 { grid-column: 6 / 13; width: auto; margin-top: -10vh; position: relative; z-index: 2; }
-  .reel--3 { grid-column: 2 / 9; width: auto; margin-top: 8vh; }
+  .reel--2 { grid-column: 9 / 12; width: auto; margin-top: -18vh; position: relative; z-index: 2; }
+  .reel--3 { grid-column: 2 / 9; width: auto; margin-top: -40vh; }
 
   .sheet__stage { grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .sheet__item:nth-of-type(3n) { grid-column: span 2; }
