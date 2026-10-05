@@ -166,6 +166,12 @@ main section:focus, main article:focus { outline: none; }
 .hero__portrait figcaption { display: none; margin-top: 6px; color: var(--stone); }
 
 .hero__roles { margin-top: 20px; display: grid; gap: 2px; position: relative; z-index: 2; }
+.hero__now { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--ink); flex: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .pulse { animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .25; transform: scale(.7); } }
+}
 .hero__scroll { margin-top: 18px; color: var(--stone); }
 
 /* --- разбивка на буквы --- */
