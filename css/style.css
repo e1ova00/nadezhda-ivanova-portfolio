@@ -47,6 +47,8 @@ body {
 }
 
 img, video { display: block; max-width: 100%; }
+/* дрейфующие заголовки и 3D-карусель не должны создавать горизонтальный скролл (clip не ломает sticky) */
+main, .footer { overflow-x: clip; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 ul, ol { list-style: none; margin: 0; padding: 0; }
@@ -261,6 +263,7 @@ main section:focus, main article:focus { outline: none; }
   transition: transform .9s var(--ease-out), opacity .9s ease;
   will-change: transform, opacity;
 }
+.coverflow__slide--tall { width: calc(78vw * 10 / 16 * 9 / 16); aspect-ratio: 9 / 16; }
 .coverflow.is-dragging .coverflow__slide { transition: none; }
 .coverflow__titles { overflow: hidden; height: 1.3em; font-size: var(--fs-lead); letter-spacing: -0.03em; margin-bottom: 2vh; }
 .coverflow__title { transition: transform .9s var(--ease-out); will-change: transform; }
@@ -283,13 +286,13 @@ main section:focus, main article:focus { outline: none; }
 
 /* crossfade: на мобильном — два кадра подряд */
 .crossfade__sticky { display: grid; gap: 12px; }
-.crossfade__layer { aspect-ratio: 16 / 10; }
+.crossfade__layer { aspect-ratio: 1280 / 784; }
 .crossfade__layer--b { width: 55%; aspect-ratio: 9 / 16; justify-self: end; }
 .crossfade__layer figcaption { position: absolute; left: 8px; top: 8px; z-index: 1; color: var(--stone); }
 
 /* flip cards */
 .flips { display: grid; gap: 14px; }
-.flip { perspective: 1400px; aspect-ratio: 4 / 5; position: relative; overflow: hidden; outline-offset: 4px; }
+.flip { perspective: 1400px; aspect-ratio: 16 / 10; position: relative; overflow: hidden; outline-offset: 4px; }
 .flip__inner {
   position: relative; width: 100%; height: 100%;
   transform-style: preserve-3d;
@@ -463,15 +466,16 @@ main section:focus, main article:focus { outline: none; }
   .coverflow__track { height: 46vw; max-height: 720px; }
   .coverflow__ui { justify-content: flex-end; gap: 28px; }
   .coverflow__slide { width: 52vw; }
+  .coverflow__slide--tall { width: calc(52vw * 10 / 16 * 9 / 16); }
 
   .project { grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
   .project__info { grid-column: 1 / 5; position: sticky; top: 14vh; align-self: start; }
   .crossfade, .flips { grid-column: 5 / 13; }
 
-  .flips { grid-template-columns: repeat(3, 1fr); align-items: start; }
-  .flip:nth-child(2) { margin-top: 12vh; }
-  .flip:nth-child(3) { margin-top: 4vh; }
-  .flip__back { font-size: clamp(1.1rem, .6rem + 1vw, 1.8rem); }
+  .flips { gap: 8vh; }
+  .flip { width: 82%; }
+  .flip:nth-child(2) { justify-self: end; }
+  .flip__back { font-size: clamp(1.2rem, .6rem + 1.4vw, 2.4rem); padding: 28px; }
 
   .reels { grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); gap: 0 var(--gutter); }
   .reel--1 { grid-column: 1 / 13; }
@@ -515,8 +519,9 @@ main section:focus, main article:focus { outline: none; }
   /* crossfade: два слоя в одной sticky-сцене */
   .crossfade { height: 220vh; }
   .crossfade__sticky { position: sticky; top: 14vh; height: 72vh; display: block; }
-  .crossfade__layer { position: absolute; inset: 0; aspect-ratio: auto; will-change: transform, opacity; }
-  .crossfade__layer--b { width: 34%; left: 33%; aspect-ratio: auto; }
+  .crossfade__layer { position: absolute; will-change: transform, opacity; }
+  .crossfade__layer--a { left: 0; right: 0; top: 50%; margin-top: calc(-0.5 * min(72vh, 100% * 784 / 1280)); aspect-ratio: 1280 / 784; }
+  .crossfade__layer--b { top: 0; bottom: 0; left: 50%; width: auto; margin-left: -20.25vh; aspect-ratio: 9 / 16; }
   .is-crossfade .crossfade__layer--b { opacity: 0; transform: scale(.8); }
 
   /* фото: стопка, которая разлетается по скроллу */

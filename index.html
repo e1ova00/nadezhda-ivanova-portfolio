@@ -97,9 +97,9 @@
   <section class="float" aria-label="Избранные изображения">
     <p class="float__hint mono tracked"><span>Selected</span><span>fragments</span><span>(move</span><span>closer)</span></p>
     <div class="float__stage" data-float data-cursor="VIEW">
-      <figure class="float__item" style="--x:-30%;--y:-18%;--w:22;--r:-6deg" data-ph="projects/fashion/screen-01.jpg"></figure>
+      <figure class="float__item" style="--x:-30%;--y:-18%;--w:22;--r:-6deg" data-ph="projects/fashion/desktop.jpg"></figure>
       <figure class="float__item" style="--x:4%;--y:-28%;--w:16;--r:4deg"  data-ph="photography/photo-01.jpg"></figure>
-      <figure class="float__item" style="--x:24%;--y:-6%;--w:20;--r:7deg"  data-ph="projects/web-app/screen-01.jpg"></figure>
+      <figure class="float__item" style="--x:24%;--y:-6%;--w:20;--r:7deg"  data-ph="projects/web-app/sos.jpg"></figure>
       <figure class="float__item" style="--x:-12%;--y:16%;--w:18;--r:3deg"  data-ph="photography/photo-02.jpg"></figure>
       <figure class="float__item" style="--x:-2%;--y:-2%;--w:24;--r:-2deg" data-ph="video/poster-01.jpg"></figure>
       <figure class="float__item" style="--x:30%;--y:24%;--w:14;--r:-8deg" data-ph="photography/photo-03.jpg"></figure>
@@ -119,16 +119,15 @@
         <p class="coverflow__title" data-title></p>
       </div>
       <div class="coverflow__track">
-        <figure class="coverflow__slide" data-project="Fashion e-commerce" data-ph="projects/fashion/screen-01.jpg"></figure>
-        <figure class="coverflow__slide" data-project="Fashion e-commerce" data-ph="projects/fashion/screen-02.jpg"></figure>
-        <figure class="coverflow__slide" data-project="Fashion e-commerce" data-ph="projects/fashion/screen-03.jpg"></figure>
-        <figure class="coverflow__slide" data-project="Web application" data-ph="projects/web-app/screen-01.jpg"></figure>
-        <figure class="coverflow__slide" data-project="Web application" data-ph="projects/web-app/screen-02.jpg"></figure>
-        <figure class="coverflow__slide" data-project="Web application" data-ph="projects/web-app/screen-03.jpg"></figure>
+        <figure class="coverflow__slide" data-project="Kitsu Clothes" data-ph="projects/fashion/desktop.jpg" aria-label="Kitsu Clothes — десктоп, страница блога"></figure>
+        <figure class="coverflow__slide coverflow__slide--tall" data-project="Kitsu Clothes" data-ph="projects/fashion/mobile.jpg" aria-label="Kitsu Clothes — мобильная главная"></figure>
+        <figure class="coverflow__slide coverflow__slide--tall" data-project="Kitsu Clothes" data-ph="projects/fashion/mobile-collection.jpg" aria-label="Kitsu Clothes — новая коллекция"></figure>
+        <figure class="coverflow__slide" data-project="Women Safety" data-ph="projects/web-app/contacts.jpg" aria-label="Women Safety — экстренные контакты"></figure>
+        <figure class="coverflow__slide" data-project="Women Safety" data-ph="projects/web-app/sos.jpg" aria-label="Women Safety — кнопка SOS"></figure>
       </div>
       <div class="coverflow__ui mono">
         <button class="coverflow__btn" data-prev data-magnetic aria-label="Предыдущий слайд">←</button>
-        <p class="coverflow__count" data-count>01 / 06</p>
+        <p class="coverflow__count" data-count>01 / 05</p>
         <button class="coverflow__btn" data-next data-magnetic aria-label="Следующий слайд">→</button>
       </div>
     </div>
@@ -137,18 +136,19 @@
     <article class="project" id="fashion" aria-labelledby="fashion-title">
       <div class="project__info" data-reveal>
         <p class="mono project__num">P—01</p>
-        <h3 id="fashion-title" class="project__title">Fashion e-commerce</h3>
-        <p class="project__desc">Сайт для покупки одежды. <span class="todo">[ДОБАВИТЬ: 2–3 предложения — задача, аудитория, твоя роль]</span></p>
+        <h3 id="fashion-title" class="project__title">Kitsu Clothes</h3>
+        <p class="project__desc">Интернет-магазин одежды из&nbsp;Японии: каталог, кастом, ИИ-примерка и&nbsp;блог. Десктопная и&nbsp;мобильная версии.</p>
         <dl class="project__facts mono">
-          <div><dt>Тип</dt><dd>UX/UI, web</dd></div>
-          <div><dt>Год</dt><dd class="todo">[год]</dd></div>
-          <div><dt>Инструменты</dt><dd class="todo">[напр. Figma]</dd></div>
+          <div><dt>Тип</dt><dd>Fashion e-commerce</dd></div>
+          <div><dt>Роль</dt><dd>Организатор, руководитель</dd></div>
+          <div><dt>Год</dt><dd>2026</dd></div>
+          <div><dt>Инструменты</dt><dd>Figma</dd></div>
         </dl>
       </div>
       <div class="crossfade" data-crossfade>
         <div class="crossfade__sticky">
-          <figure class="crossfade__layer crossfade__layer--a" data-ph="projects/fashion/desktop.jpg"><figcaption class="mono">desktop</figcaption></figure>
-          <figure class="crossfade__layer crossfade__layer--b" data-ph="projects/fashion/mobile.jpg"><figcaption class="mono">mobile</figcaption></figure>
+          <figure class="crossfade__layer crossfade__layer--a" data-ph="projects/fashion/desktop.jpg"><figcaption class="mono">desktop — блог</figcaption></figure>
+          <figure class="crossfade__layer crossfade__layer--b" data-ph="projects/fashion/mobile.jpg"><figcaption class="mono">mobile — главная</figcaption></figure>
         </div>
       </div>
     </article>
@@ -157,27 +157,27 @@
     <article class="project project--app" id="webapp" aria-labelledby="app-title">
       <div class="project__info" data-reveal>
         <p class="mono project__num">P—02</p>
-        <h3 id="app-title" class="project__title">Web application</h3>
-        <p class="project__desc">Веб-приложение. <span class="todo">[ДОБАВИТЬ: 2–3 предложения — что делает приложение, для кого, твоя роль]</span></p>
-        <p class="mono project__hint">Наведи на экран — на обороте задача и решение</p>
+        <h3 id="app-title" class="project__title">Women Safety</h3>
+        <p class="project__desc">Веб-приложение для безопасности женщин: кнопка SOS, карта, маршрут, сообщество и&nbsp;экстренные контакты.</p>
+        <dl class="project__facts mono">
+          <div><dt>Тип</dt><dd>Web application</dd></div>
+          <div><dt>Роль</dt><dd>Организатор, руководитель</dd></div>
+          <div><dt>Год</dt><dd>2026</dd></div>
+          <div><dt>Инструменты</dt><dd>Figma</dd></div>
+        </dl>
+        <p class="mono project__hint">Наведи на экран — на обороте пояснение</p>
       </div>
       <ul class="flips" data-reveal>
-        <li class="flip" tabindex="0" data-cursor="VIEW">
+        <li class="flip" tabindex="0" data-cursor="VIEW" aria-label="Экстренные контакты">
           <div class="flip__inner">
-            <figure class="flip__face flip__front" data-ph="projects/web-app/screen-01.jpg"></figure>
-            <div class="flip__face flip__back"><p class="mono">01 — Задача</p><p class="todo">[Какую проблему пользователя решает экран]</p></div>
+            <figure class="flip__face flip__front" data-ph="projects/web-app/contacts.jpg"></figure>
+            <div class="flip__face flip__back"><p class="mono">01 — Экстренные контакты</p><p>Люди, которым вы доверяете, сразу получат SOS-сигнал в&nbsp;экстренной ситуации.</p></div>
           </div>
         </li>
-        <li class="flip" tabindex="0" data-cursor="VIEW">
+        <li class="flip" tabindex="0" data-cursor="VIEW" aria-label="Кнопка SOS">
           <div class="flip__inner">
-            <figure class="flip__face flip__front" data-ph="projects/web-app/screen-02.jpg"></figure>
-            <div class="flip__face flip__back"><p class="mono">02 — Решение</p><p class="todo">[Ключевое дизайн-решение]</p></div>
-          </div>
-        </li>
-        <li class="flip" tabindex="0" data-cursor="VIEW">
-          <div class="flip__inner">
-            <figure class="flip__face flip__front" data-ph="projects/web-app/screen-03.jpg"></figure>
-            <div class="flip__face flip__back"><p class="mono">03 — Результат</p><p class="todo">[Что получилось / что бы улучшила]</p></div>
+            <figure class="flip__face flip__front" data-ph="projects/web-app/sos.jpg"></figure>
+            <div class="flip__face flip__back"><p class="mono">02 — Кнопка SOS</p><p>Удержание 3&nbsp;секунды — и&nbsp;сигнал тревоги с&nbsp;геопозицией уходит спасательным службам и&nbsp;близким.</p></div>
           </div>
         </li>
       </ul>
